@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'FixedSys';
+    src: url('../Font/BananaChips-Regular.otf') format('otf');
+}
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+    background-color: #4e3838;
+    color: #e0e0e0;
+    font-family: 'FixedSys', "Century Gothic", sans-serif;
+    text-shadow: 0px 0px 1px #000;
+    image-rendering: pixelated;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    margin: .3em;
+    border: #774f2f;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 0.3em;
+    text-align: center;
+    font-size: 6em;
+    padding: 0.1em;
+    font-weight: normal;
+}
+h2 {
+    margin: .3em;
+    border: #c9ffff;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 0.3em;
+    text-align: center;
+    font-size: 3em;
+    padding: 0.1em auto;
+    font-weight: normal;
+}
+.introduction {
+    font-size: 2rem;
+    text-align: center;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    padding: 0.5em;
+    font-size: 1.5em;
+    margin: 10px auto;
+    justify-content: center;
+    border-collapse: collapse;
+    background-color: #252525;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* download links */
+a {
+    color: #a16f52;
+}
