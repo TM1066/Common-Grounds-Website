@@ -1,31 +1,30 @@
 @font-face {
-    font-family: 'FixedSys';
-    src: url('../Font/BananaChips-Regular.otf') format('otf');
+    font-family: 'BananaChipsFont';
+    src: url('../Font/BananaChips-Regular.woff2') format('woff2');
 }
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 body {
     background-color: #4e3838;
     color: #e0e0e0;
-    font-family: 'FixedSys', "Century Gothic", sans-serif;
-    text-shadow: 0px 0px 1px #000;
+    font-family: 'BananaChipsFont', "Century Gothic", sans-serif;
+    text-shadow: 0px 0px 25px #000;
     image-rendering: pixelated;
     margin: 0;
     padding: 20px;
 }
 h1 {
-    margin: .3em;
-    border: #774f2f;
-    border-style: solid;
+    margin: 0.2em;
     border-width: 0.1em;
     border-radius: 0.3em;
+    border: 10px solid #774f2f;
+    padding-bottom: 1rem;
     text-align: center;
-    font-size: 6em;
-    padding: 0.1em;
+    justify-content: center;
+    font-size: 10rem;
     font-weight: normal;
 }
 h2 {
     margin: .3em;
-    border: #c9ffff;
+    border: #99663c;
     border-style: solid;
     border-width: 0.1em;
     border-radius: 0.3em;
@@ -34,21 +33,37 @@ h2 {
     padding: 0.1em auto;
     font-weight: normal;
 }
-.introduction {
-    font-size: 2rem;
+.hero {
+    display: flex;
+    justify-content: center;
+    background-color: #312424;
+}
+.hero img {
+    max-width: 90%;
+    max-height: auto;
+    object-fit: cover;
+}
+.hero:hover img{
+    filter: blur(5px) brightness(50%);
+}
+
+.landing-text {
     text-align: center;
-    border: 1px solid #333;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #1e1e1e;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    
+}
+
+footer 
+{
+    display: block;
+    background-color: #000;
 }
 .nav-links {
     display: flex;
     flex-direction: row;
     gap: 200px;
     padding: 0.5em;
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 10px auto;
     justify-content: center;
     border-collapse: collapse;
@@ -56,10 +71,45 @@ h2 {
     color: #e0e0e0;
     border: 1px solid #444;
     border-radius: 6px;
-    overflow: hidden;
+    overflow: auto;
 }
 
-/* download links */
+/* hypertext links */
 a {
     color: #a16f52;
+}
+a :visited
+{
+    color: #6b4a37;
+}
+
+a :hover {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Menu Stuff */
+.menu-container {
+    display: block;
+
+}
+.menu-item {
+    
+}
+
+/* review page stuff */
+review-container
+{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.review
+{
+    background-color: #252525;
+    color: #e0e0e0;
+    border: 1px solid #444;
 }
