@@ -38,26 +38,39 @@ document.getElementById("quiz-form").addEventListener("submit", function(e) {
                 resultText += "Flower Petals "
                 break;
         }
-        resultText += "on top or something I don't know."
+        resultText += "on top of Los Atlas Decaf, but don't come back to me if you throw up from the flavour of REAL COFFEE!."
     }
     //handling strong coffee - Robusta Beans
     else if (answers.Q4 == "4B"){
         resultImage = "Images/quiz/robusta.jpg";
         resultTitle = "Robusta Blends!"
-        resultText = "Your predilection for stronger blends means you'll likely be a big fan of some of our Robusta Coffees!"
+        resultText = "Your predilection for stronger blends means you'll likely be a big fan of some of our Robusta Coffees!\n \n"
 
         if (answers.Q2 == "2B") {
-            resultText += "\nConsider Trying our Los Atlas Blend from Colombia, for a rich hazelnut and dark chocolate taste!"
+            resultText += "Consider Trying our Los Atlas Blend from Colombia, for a rich hazelnut and dark chocolate taste!"
         }
-        else if (answers.Q3 == "3B") {
-            resultText += "\nConsider Trying our Resolut Blend from Peru, for a rich caramel and chocolate taste, with notes of stone fruit!"
+        else if (answers.Q3 == "3B" || answers.Q3 == "3C") {
+            resultText += "Consider Trying our Resolut Blend from Peru, for a rich caramel and chocolate taste, with notes of stone fruit!"
         }
     }
     //handle light coffee/also catch edge cases - All goe to Arabica
     else {
-        resultImage = "Images/quiz/robusta.jpg";
+        resultImage = "Images/quiz/arabica.webp";
         resultTitle = "Arabica Blends!"
-        resultText = ""
+        resultText = "Try easing into coffee with some lighter blends! Arabica is great for anybody, whether you like coffee already or are just getting started!\n"
+
+        if (answers.Q2 == "2A")
+        {
+            resultText += "Consider Trying our Santa Athena Brew from Peru, known for its apricot and grape notes! Perfect for a berry lover such as yourself!"
+        }
+        else if (answers.Q1 == "1A")
+        {
+            resultText += "Consider Trying our Mariallo Blend from Ethiopia, known for its Pear and Nectarine notes, perfect for someone like you who loves citrus!"
+        }
+        else 
+        {
+            resultText += "Consider Trying out our Familia Bolivia Organic Coffee, using the Bourbon family of Arabica beans, it's known for being smooth, juice and pleasantly sweet, perfect for someone trying out some lighter blends!"
+        }
     }
 
     // Hide the quiz questions
@@ -66,8 +79,7 @@ document.getElementById("quiz-form").addEventListener("submit", function(e) {
     // Show the result
     document.getElementById("result-image").src = resultImage;
     document.getElementById("result-title").textContent = resultTitle;
-    document.getElementById("result-description").innerHTML = resultText.replace("\n","<br>"); // I want \n in paragraphs!
+    document.getElementById("result-description").innerHTML = resultText.replace("\n","<br>"); // Lets me use \n like in coding without writing in <br> all the time
     document.querySelector(".quiz-result-container").style.display = "flex";
-
     });
 
