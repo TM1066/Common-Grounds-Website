@@ -16,13 +16,14 @@
       <a href="Quiz.html">"What's My Coffee" Quiz!</a>
     </div>
   </nav>
+  <h2>Find Your Coffee!</h2>
 
   <div class="quiz-container">
+    <form id="quiz-form">
 
-    <! QUESTION 1: Do you prefer spicy or citrus flavours? >
-    <h2>Do you prefer spicy or citrus flavours?</h2>
-    <div class="quiz-question"> 
-      <form id="quiz-form1">
+      <! QUESTION 1: Do you prefer spicy or citrus flavours? >
+      <h2>Do you prefer spicy or citrus flavours?</h2>
+      <div class="quiz-question"> 
         <label>
           <img src="Images/quiz/spizy.jpg">
           <input type="radio" value="1A" name="Q1" required>
@@ -31,13 +32,11 @@
           <input type="radio" value="1B" name="Q1" required>
           <img src="Images/quiz/citrus.webp">
         </label>
-      </form>
-    </div>
+      </div>
 
-    <! QUESTION 2: Do you prefer berry flavours or dark chocolate? >  
-    <h2>Do you prefer berry flavours or dark chocolate?</h2>
-    <div class="quiz-question"> 
-      <form id="quiz-form2">
+      <! QUESTION 2: Do you prefer berry flavours or dark chocolate? >  
+      <h2>Do you prefer berry flavours or dark chocolate?</h2>
+      <div class="quiz-question"> 
         <label>
           <img src="Images/quiz/berries.webp">
           <input type="radio" value="2A" name="Q2" required>
@@ -46,13 +45,11 @@
           <input type="radio" value="2B" name="Q2" required>
           <img src="Images/quiz/dark_chocolate.webp">
         </label>
-      </form>
-    </div>
+      </div>
 
-    <! QUESTION 3: Which smell is your favourite? (Lemon, Chocolate, Peaches, Flowers) > 
-    <h2>Which smell is your favourite? (Lemon, Chocolate, Peaches, Flowers)</h2>
-    <div class="quiz-question"> 
-      <form id="quiz-form3">
+      <! QUESTION 3: Which smell is your favourite? (Lemon, Chocolate, Peaches, Flowers) > 
+      <h2>Which smell is your favourite? (Lemon, Chocolate, Peaches, Flowers)</h2>
+      <div class="quiz-question"> 
         <label>
           <img src="Images/quiz/lemon.png">
           <input type="radio" value="3A" name="Q3" required>
@@ -69,13 +66,11 @@
           <input type="radio" value="3D" name="Q3" required>
           <img src="Images/quiz/flowers.webp">
         </label>
-      </form>
-    </div>
+      </div>
 
-    <! QUESTION 4: Do you prefer a decaf, strong or light coffee? > 
-    <h2>Do you prefer a decaf, strong or light coffee?</h2>
-    <div class="quiz-question"> 
-      <form id="quiz-form4">
+      <! QUESTION 4: Do you prefer a decaf, strong or light coffee? > 
+      <h2>Do you prefer a decaf, strong or light coffee?</h2>
+      <div class="quiz-question"> 
         <label>
           <img src="Images/quiz/decaf.jpg">
           <input type="radio" value="4A" name="Q4" required>
@@ -88,18 +83,26 @@
           <input type="radio" value="4C" name="Q4" required>
           <img src="Images/quiz/light_Coffee.jpg">
         </label>
-      </form>
-    </div>
+      </div>
 
-    <label>
-      <input type="submit">
-    </label>
+      <label>
+        <button type="submit">Find Your Coffee!</button>
+      </label>
+    </form>
+  </div>
+
+  <div class="quiz-result-container">
+    <h2>Coffee Identified!!</h2>
+    <h1 id="result-title"></h1>
+    <img id="result-image">
+    <p id="result-description"></p>
+
 
 
   </div>
 
 
-
+  <script src="Scripts\quizHandler.js" defer></script>
   
 </body>
 <footer>

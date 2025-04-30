@@ -12,7 +12,9 @@
 */
 
 //Setting what runs when the user hits submit
-document.getElementById('reviewForm').addEventListener('submit', function () {
+document.getElementById('reviewForm').addEventListener('submit', function (e) {
+    e.preventDefault(); //Stops the page from reloading
+
     const reviewerName = document.getElementById('name').value;
     const title = document.getElementById('title').value;
     const rating = document.getElementById('rating').value;
