@@ -291,14 +291,15 @@ a:hover {
     grid-column: 2 / 4; /* spans columns 2 and 3 */
     grid-row: 2;
     font-size: 2rem;
-    text-align: left;
+    text-align: center;
+    text-decoration: underline;
 }
 
 .review-content {
     grid-column: 1 / 4;
     grid-row: 3;
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 .review-form-container {
