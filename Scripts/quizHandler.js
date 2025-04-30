@@ -22,7 +22,7 @@ document.getElementById("quiz-form").addEventListener("submit", function(e) {
     if (answers.Q4 == "4A") {
         resultImage = "Images/quiz/decafresult.jpg";
         resultTitle = "Any Decaf Coffee!"
-        resultText = "Now, come on. Its a coffee shop. Me and you both know VERY WELL all decaf tastes exactly the same. if you like chemicals, don't let me stop what floats your boat but DONT COME TO MY SHOP!!!\n\nTry adding some "
+        resultText = "Now, come on. Its a coffee shop. Me and you both know VERY WELL all decaf tastes exactly the same. if you like chemicals, don't let me stop what floats your boat but DONT COME TO MY SHOP!!!\nTry adding some "
         switch (answers.Q3)
         {
             case "3A":
@@ -46,20 +46,11 @@ document.getElementById("quiz-form").addEventListener("submit", function(e) {
         resultTitle = "Robusta Blends!"
         resultText = "Your predilection for stronger blends means you'll likely be a big fan of some of our Robusta Coffees!"
 
-        switch (answers.Q3)
-        {
-            case "3A":
-                resultText += "Lemon "
-                break;
-            case "3B":
-                resultText += "Chocolate "
-                break;
-            case "3C":
-                resultText += "Peaches "
-                break;
-            case "3D":
-                resultText += "Flower Petals "
-                break;
+        if (answers.Q2 == "2B") {
+            resultText += "\nConsider Trying our Los Atlas Blend from Colombia, for a rich hazelnut and dark chocolate taste!"
+        }
+        else if (answers.Q3 == "3B") {
+            resultText += "\nConsider Trying our Resolut Blend from Peru, for a rich caramel and chocolate taste, with notes of stone fruit!"
         }
     }
     //handle light coffee/also catch edge cases - All goe to Arabica
@@ -75,8 +66,8 @@ document.getElementById("quiz-form").addEventListener("submit", function(e) {
     // Show the result
     document.getElementById("result-image").src = resultImage;
     document.getElementById("result-title").textContent = resultTitle;
-    document.getElementById("result-description").textContent = resultText;
-    document.querySelector(".quiz-result-container").style.display = "block";
+    document.getElementById("result-description").innerHTML = resultText.replace("\n","<br>"); // I want \n in paragraphs!
+    document.querySelector(".quiz-result-container").style.display = "flex";
 
     });
 
